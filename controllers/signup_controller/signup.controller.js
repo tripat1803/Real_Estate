@@ -1,4 +1,4 @@
-const user = require("../models/user.mongo.js");
+const user = require("../../models/user/user.mongo.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 async function signup(req, res) {
