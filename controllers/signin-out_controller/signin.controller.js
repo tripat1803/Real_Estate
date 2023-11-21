@@ -16,7 +16,7 @@ async function signin(req, res) {
 
       if (passwordMatch) {
         const token = jwt.sign(
-          { user_id: user._id, email },
+          { user_id: userCheck._id, email },
           process.env.TOKEN_KEY,
           {
             expiresIn: "2h",
@@ -27,7 +27,7 @@ async function signin(req, res) {
         await userCheck.save();
         // user
         res.status(200).json({ message: "User logged in successfully", user: {
-          user_id: user._id,
+          user_id: userCheck._id,
           email: email,
           token: token
         });
