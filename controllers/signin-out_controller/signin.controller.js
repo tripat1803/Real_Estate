@@ -29,7 +29,7 @@ async function signin(req, res) {
         res.status(200).json({ message: "User logged in successfully", user: {
           user_id: userCheck._id,
           email: email,
-          token: token
+          token: token }
         });
       }
     } else {
