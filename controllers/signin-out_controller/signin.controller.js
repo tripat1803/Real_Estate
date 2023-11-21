@@ -26,7 +26,11 @@ async function signin(req, res) {
         userCheck.token = token;
         await userCheck.save();
         // user
-        res.status(200).json({ message: "User logged in successfully" });
+        res.status(200).json({ message: "User logged in successfully", user: {
+          user_id: user._id,
+          email: email,
+          token: token
+        });
       }
     } else {
       res.status(422).json({ error: "Invalid Email or Password" });
