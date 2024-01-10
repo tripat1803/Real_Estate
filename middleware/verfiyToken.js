@@ -3,6 +3,7 @@ const invalidToken = require("../models/invalidToken/invalidToken.mongo");
 
 async function verifyToken(req, res, next) {
   const token = req.headers.authorization;
+  console.log(token);
   if (!token) {
     return res.status(401).json({ error: "Unauthorized user" });
   }

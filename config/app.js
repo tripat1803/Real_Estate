@@ -4,7 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 require("dotenv").config();
 const app = express();
-const api = require('../routes/api')
+const api = require('../api.js')
 const path = require('path')
 
 

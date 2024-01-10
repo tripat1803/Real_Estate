@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "build": "node server.js"
+    "dev": "concurrently \"nodemon server.js\" \"npm start --prefix Realtor_Clone\"",
+    "start": "concurrently \"node server.js\" \"npm start --prefix Realtor_Clone\"",
+    "build": "npm install && npm install --prefix Realtor_Clone"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +25,8 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

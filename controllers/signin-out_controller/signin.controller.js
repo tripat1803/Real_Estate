@@ -19,7 +19,7 @@ async function signin(req, res) {
           { user_id: userCheck._id, email },
           process.env.TOKEN_KEY,
           {
-            expiresIn: "2h",
+            expiresIn: "24h",
           }
         );
         // save user token

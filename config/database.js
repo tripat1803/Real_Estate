@@ -12,7 +12,9 @@ mongoose.connection.on("error", (err) => {
 });
 
 async function mongoConnect() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(MONGO_URL, {
+    dbName: "real-estate"
+  });
 }
 
 module.exports = { mongoConnect };
